@@ -1,0 +1,17 @@
+# Python / local
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# Packaging build products
+*.egg-info/
+build/
+dist/
+
+# Generated outputs
+figs/
+maps/
+maps_*/
+*.npz
+.DS_Store

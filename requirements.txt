@@ -1,0 +1,17 @@
+# Runtime dependencies for the BNT shear-nulling toolkit.
+#
+# NOTE: the scripts use numpy.trapz, which was removed in NumPy 2.0, so NumPy
+# must stay below 2.0
+numpy<2
+scipy
+matplotlib
+astropy
+colossus
+tqdm
+
+# Notebook / tutorial
+jupyter
+ipykernel
+nbformat
+
+

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bntcluster"
+version = "0.1.0"
+description = "BNT shear-nulling toolkit for galaxy-cluster weak lensing"
+requires-python = ">=3.9,<3.13"   # bounded by numpy<2 (NumPy 1.26 supports up to 3.12)
+license = { text = "MIT" }
+authors = [
+    { name = "L. Chappuis", email = "loris.chappuis@cea.fr"},
+]
+
+dependencies = [
+    "numpy<2",       # the code uses numpy.trapz, removed in NumPy 2.0
+    "scipy",
+    "matplotlib",
+    "astropy",
+    "colossus",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+# Running the analysis / tutorial notebooks.
+notebook = ["jupyter", "ipykernel", "nbformat"]
+
+[tool.setuptools]
+packages = ["bntcluster"]
